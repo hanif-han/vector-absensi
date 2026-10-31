@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#05070d">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Daftar · VECTOR SYNDICATE</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2305070d'/%3E%3Cpath d='M12 14 L32 50 L52 14 L42 14 L32 34 L22 14 Z' fill='%2300f5ff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="daftar.js" defer></script>
+</head>
+<body>
+  <div class="frame frame-cyan" aria-hidden="true"></div>
+  <div class="frame frame-magenta" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <header class="brand">
+      <p class="eyebrow">INITIALIZED · <span class="dot" aria-hidden="true"></span> SYSTEM ONLINE</p>
+      <h1 class="title">VECTOR SYNDICATE</h1>
+      <p class="subtitle">DAFTAR ANGGOTA</p>
+    </header>
+
+    <form id="form" class="card" novalidate>
+      <label class="label" for="displayName">Nama</label>
+      <input id="displayName" class="field" type="text" maxlength="40"
+             autocomplete="name" placeholder="Nama kamu di squad">
+
+      <label class="label" for="email">Email</label>
+      <input id="email" class="field" type="email" maxlength="254"
+             autocomplete="email" inputmode="email" autocapitalize="off"
+             spellcheck="false" placeholder="nama@email.com">
+
+      <label class="label" for="password">Password</label>
+      <input id="password" class="field" type="password" maxlength="64"
+             autocomplete="new-password" placeholder="Minimal 8 karakter">
+
+      <label class="label" for="password2">Ulangi password</label>
+      <input id="password2" class="field" type="password" maxlength="64"
+             autocomplete="new-password" placeholder="Ketik password yang sama">
+
+      <button id="submit" class="primary" type="submit" disabled>DAFTAR</button>
+      <div id="result" class="result" role="alert" hidden></div>
+    </form>
+
+    <p class="foot">Pendaftaran tidak memerlukan kode atau token. Akun baru menunggu persetujuan admin.</p>
+    <p class="foot"><a href="/">Kembali ke halaman absensi</a></p>
+  </main>
+</body>
+</html>

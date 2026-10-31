@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#05070d">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Absensi Member · VECTOR SYNDICATE</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2305070d'/%3E%3Cpath d='M12 14 L32 50 L52 14 L42 14 L32 34 L22 14 Z' fill='%2300f5ff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="frame frame-cyan" aria-hidden="true"></div>
+  <div class="frame frame-magenta" aria-hidden="true"></div>
+
+  <main class="wrap">
+    <header class="brand">
+      <p class="eyebrow">INITIALIZED · <span class="dot" aria-hidden="true"></span> SYSTEM ONLINE</p>
+      <h1 class="title">VECTOR SYNDICATE</h1>
+      <p class="subtitle">ABSENSI MEMBER</p>
+    </header>
+
+    <section id="state" class="card state" role="status" aria-live="polite">Memuat sesi absensi…</section>
+
+    <form id="form" class="card" hidden novalidate autocomplete="off">
+      <div class="session">
+        <span class="label">Sesi</span>
+        <div id="sessionInfo" class="session-info"></div>
+        <select id="sessionSelect" class="field" aria-label="Pilih sesi" hidden></select>
+      </div>
+
+      <label class="label" for="memberBtn">Nama</label>
+      <button type="button" id="memberBtn" class="field picker">Pilih namamu</button>
+
+      <label class="label" for="token">Token</label>
+      <input id="token" class="field" type="text" maxlength="100"
+             autocomplete="off" autocapitalize="off" autocorrect="off"
+             spellcheck="false" placeholder="Masukkan token dari admin">
+
+      <button id="submit" class="primary" type="submit" disabled>ABSEN</button>
+      <div id="result" class="result" role="alert" hidden></div>
+      <button id="again" class="secondary" type="button" hidden>Absen untuk nama lain</button>
+    </form>
+
+    <p class="foot">Token berlaku 1 jam dan hanya diberikan oleh admin.</p>
+    <p class="foot"><a href="/daftar">Belum punya akun? Daftar di sini</a></p>
+  </main>
+
+  <dialog id="picker" aria-labelledby="pickerTitle">
+    <div class="picker-head">
+      <h2 id="pickerTitle">Pilih namamu</h2>
+      <button type="button" id="pickerClose" class="icon-btn" aria-label="Tutup">✕</button>
+    </div>
+    <div class="picker-search">
+      <input id="search" class="field" type="search" placeholder="Cari nama…"
+             autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Cari nama">
+      <p id="count" class="muted"></p>
+    </div>
+    <ul id="list" class="list"></ul>
+    <p id="empty" class="muted empty" hidden>Nama tidak ditemukan.</p>
+  </dialog>
+</body>
+</html>
